@@ -36,8 +36,10 @@ class WorldTime{
           hours: int.parse(hour_offset),
           minutes: int.parse(min_offset)
       ));
-      isDaytime=now.hour>6&&now.hour<20?true:false;
+      isDaytime=now.hour>6&&now.hour<19?true:false;
+
       date=now.toString().substring(0,10);
+
       time=DateFormat.jm().format(now);
     }catch(e){
       time=e.toString();
